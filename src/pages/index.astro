@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/inter";
+import astroConfig from "astro.config.mjs";
 import Compatibility from "~/components/compatibility.astro";
 import Features from "~/components/features.astro";
 import Footer from "~/components/footer.astro";
@@ -9,7 +10,7 @@ import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
 
-const { generator, site } = Astro;
+const { generator, site } = astroConfig;
 const image = new URL("social.jpg", site);
 const description =
   "Build fast , faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
