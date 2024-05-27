@@ -1,0 +1,11 @@
+.body{
+    background: white;
+}
+
+.boton{
+    background-color: blue;
+    position: relative;
+    height: 60px;
+    max-width: 300px;
+    width: 100%;
+}
