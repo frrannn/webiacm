@@ -9,7 +9,7 @@ import { ChangeEvent, createSignal } from "solid-js";
     if (files && files.length > 0) {
       const file = files[0];
       const { data, error } = await supabase.storage
-        .from("images")
+        .from("FotosDB")
         .upload("public/" + file.name, file);
 
       if (data) {
