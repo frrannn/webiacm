@@ -1,10 +1,10 @@
 ---
 import supabase from "../utils/supabase";
-import { ChangeEvent, createSignal } from "solid-js";
+import { createSignal } from "solid-js";
 ---
 
 <script>
-  async function handleUpload(event: ChangeEvent<HTMLInputElement>) {
+  async function handleUpload(event: <HTMLInputElement>) {
     const files = event.target.files;
     if (files && files.length > 0) {
       const file = files[0];
