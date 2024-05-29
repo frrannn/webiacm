@@ -1,13 +1,10 @@
 "use client"
 
-import { createBrowserClient } from '@supabase/ssr';
+import { createBrowser } from './supabase_client_client';
 import { ChangeEvent } from 'react';
 
 export default function Profile() {
-    const supabase = createBrowserClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    )
+    const supabase = createBrowser();
   
     // Handle file upload event
     const uploadFile = async (event: ChangeEvent<HTMLInputElement>) => {
