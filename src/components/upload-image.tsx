@@ -14,7 +14,7 @@ export default function Profile() {
       // Call Storage API to upload file
       const { data, error } = await supabase.storage
         .from(bucket)
-        .upload(file.name, file as File);
+        .upload(file!.name, file as File);
   
       // Handle error if upload failed
       if(error) {
